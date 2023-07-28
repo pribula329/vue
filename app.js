@@ -4,7 +4,6 @@ Vue.createApp({
         return {
             shopName:[
                 "Lidl",
-                "Tesco",
                 "Kaufland"
             ]
         };
@@ -25,7 +24,7 @@ Vue.createApp({
                     {id:0, label: "10 t-shirt"},
                     {id:1, label:"5 trousers"},
                     {id:2, label:"2 cap"},
-                    {id:6, label:"2 cap"},
+                    {id:3, label:"3 orange"},
                 ]
             }
         },
