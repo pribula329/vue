@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DEMO VUE</title>
+</head>
+<body>
+<div id="shopping-list">
+    <shop v-for="shop in shopName" :name="shop"></shop>
+
+</div>
+
+<!--vlastny template-->
+<script src="https://unpkg.com/vue@3"></script>
+<script type="text/x-template" id="shop-template">
+
+    <h1>{{name}} {{ header ? header:"Welcome" }}</h1>
+    <button @click="doShow"  class="btn btn-primary">{{ textShow }}</button>
+    <div>
+      <label>
+        <input v-model="newItem" placeholder="Add new Item" type="text">
+      </label>
+      <button @click="saveItem"  class="btn btn-primary" v-bind:disabled="newItem.length<1">Add item</button>
+    </div>
+    <ul v-if="show">
+      <li v-for="item in reverseItem" :key="item.id">{{item.label}}</li>
+    </ul>
+</script>
+<script src="app.js"></script>
+
+</body>
+</html>
